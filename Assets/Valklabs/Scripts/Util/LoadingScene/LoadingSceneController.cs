@@ -32,7 +32,7 @@ namespace Valklabs.Util.LoadingScene
             //Check which mode as we want to send special events for UI to pickup on if loading a single scene.
             if(loadSceneMode == LoadSceneMode.Single)
             {
-                LoadSingleSceneSceneAsync(sceneName, onLoadingComplete);
+                LoadSingleSceneAsync(sceneName, onLoadingComplete);
             }
             else
             {
@@ -40,7 +40,7 @@ namespace Valklabs.Util.LoadingScene
             }
         }
 
-        private static void LoadSingleSceneSceneAsync(string sceneName, Action onComplete)
+        private static void LoadSingleSceneAsync(string sceneName, Action onComplete)
         {
             if (_isLoadingSingleSceneModeAsync == true)
             {
@@ -122,12 +122,7 @@ namespace Valklabs.Util.LoadingScene
         /// <param name="sceneName">The name of the scene.</param>
         /// <param name="LoadSceneMode">Loading mode. Single will unload all loaded scenes and load this scene. Additive will load a scene into the current scene
         #region Non-Async loading functions
-        public static void LoadNonAsync(string sceneName, LoadSceneMode loadSceneMode, Action onComplete = null)
-        {
-            LoadSceneNonAsync(sceneName, loadSceneMode);
-        }
-
-        private static void LoadSceneNonAsync(string sceneName, LoadSceneMode loadSceneMode)
+        public static void LoadNonAsync(string sceneName, LoadSceneMode loadSceneMode)
         {
             SceneManager.LoadScene(sceneName, loadSceneMode);
         }
