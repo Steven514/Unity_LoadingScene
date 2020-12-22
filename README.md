@@ -9,7 +9,7 @@ A static class that loads scenes async or otherwise via a non monobehaviour scri
 Purpose:   
 An async/sync scene loading controller free from being a monobehaviour. Can easily hook into it's events for your UI to display loading percentages, or a debug/popup to display states (loading failed, etc)   
 
-How to Use:
+How to Use:  
 The caller would call ```LoadingSceneController.LoadAsync(string sceneName, LoadSceneMode loadSceneMode, Action onLoadingComplete = null)``` if wanting a async load. For non-async ```LoadingSceneController.LoadNonAsync(string sceneName, LoadSceneMode loadSceneMode)```   
 
 Your custom UI/View script can hook into the events to show/hide itself while being able ot grab the percentage loaded to display on screen to the user.
