@@ -4,7 +4,7 @@ Summary:
 Intended to be used with Unity projects. A util to load scenes, specifically async, without needing your scripts to inherit monobehaviours. Done by ditching IEnumerators and wrapped up functions with making sync calls.
 
 Description:    
-Load scenes async or otherwise via a non monobehaviour script. Actions/callback setup for your caller and/or UI to listen to load states. The loading controller does not include any UI, and just performs the action of loading with sending back callbacks, and having events to listen to states. Views/UI is up to you to implement.
+A static class that loads scenes async or otherwise via a non monobehaviour script. Actions/callback setup for your caller and/or UI to listen to load states. The loading controller does not include any UI, and just performs the action of loading with sending back callbacks, and having events to listen to states. Views/UI is up to you to implement.
 
 Purpose:   
 An async/sync scene loading controller free from being a monobehaviour. Can easily hook into it's events for your UI to display loading percentages, or a debug/popup to display states (loading failed, etc)   
